@@ -1,0 +1,77 @@
+.certificates {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  & .content {
+    width: 95%;
+    margin-top: 40px;
+    & .section {
+      flex-direction: column;
+      box-shadow: 1px 1px 6px 0px #0000001e;
+      padding: 25px 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      @media (max-width: $s) {
+        margin-top: 25px;
+      }
+      &:first-child {
+        margin-bottom: 50px;
+      }
+    }
+    & h3 {
+      font-size: 29px;
+      text-decoration: underline;
+      font-weight: 500;
+    }
+    & .cards {
+      display: flex;
+      width: 100%;
+      @media (max-width: $s) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+    & .certificat {
+      border: 2px solid whitesmoke;
+      margin: 25px 10px 0 10px;
+      display: flex;
+      width: 20%;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: $box-shadow-inset;
+      transition: 0.4s;
+      @media (max-width: $s) {
+        width: 120px;
+      }
+      &:hover {
+        box-shadow: inset 0px 0px 10px 5px #0000000e;
+      }
+      & img {
+        width: 80%;
+      }
+      & h4 {
+        line-height: 40px;
+        text-align: center;
+        width: 100%;
+        border-top: 2px solid whitesmoke;
+        font-size: 16px;
+        font-weight: 500;
+        @media (max-width: $m) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  & h5 {
+    margin-top: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.4s;
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+}

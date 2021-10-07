@@ -1,0 +1,85 @@
+.experience {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  & .cards {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    flex-wrap: wrap;
+  }
+  & .exp_card {
+    font-family: "Montserrat", sans-serif;
+    box-shadow: $box-shadow;
+    margin: 20px;
+    width: 320px;
+    border: 2px solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+    @media (max-width: $m) {
+      width: 250px;
+    }
+    &:hover {
+      box-shadow: 1px 1px 9px 7px #2c8bb71e;
+      & h3,
+      & p {
+        text-shadow: 1px 1px 11px #2c8cb754;
+      }
+    }
+    & img {
+      width: 35%;
+      border: 2px solid whitesmoke;
+      padding: 9px;
+      margin-top: 20px;
+    }
+    & h3 {
+      font-size: 23px;
+      margin: 20px 20px 10px 0px;
+      font-weight: 500;
+      transition: 0.4s;
+      @media (max-width: $m) {
+        font-size: 16px;
+      }
+    }
+    & .desc {
+      margin-bottom: 20px;
+      padding: 0 30px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #101010;
+      line-height: 24px;
+      transition: 0.4s;
+      @media (max-width: $m) {
+        padding: 0 0px 0px 19px;
+        font-size: 12px;
+      }
+    }
+    & .time {
+      font-weight: 500;
+      font-size: 25px;
+      margin-bottom: 15px;
+      transition: 0.4s;
+    }
+    & button {
+      @extend %btn-main;
+      width: 115px;
+      margin-bottom: 30px;
+      height: 35px;
+      &:hover {
+        @extend %btn-main-hover;
+      }
+    }
+  }
+  // & ul {
+  //   list-style: none;
+  //   & li {
+  //     margin-bottom: 20px;
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+  // }
+}

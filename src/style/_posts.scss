@@ -1,0 +1,86 @@
+.posts {
+  text-align: center;
+  & h2 {
+    margin-bottom: 20px;
+  }
+  & .cards {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
+    flex-wrap: wrap;
+    & .card {
+      font-family: "Montserrat", sans-serif;
+      box-shadow: $box-shadow;
+      margin: 20px 20px 10px 20px;
+      width: 320px;
+      border: 2px solid whitesmoke;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: 0.4s;
+      cursor: pointer;
+      @media (max-width: $m) {
+        width: 250px;
+      }
+      &:hover {
+        box-shadow: 1px 1px 9px 7px #2c8bb71e;
+        & h3,
+        & p {
+          text-shadow: 1px 1px 11px #2c8cb754;
+        }
+      }
+      & h3 {
+        font-size: 23px;
+        margin: 20px 0;
+        font-weight: 500;
+        transition: 0.4s;
+        @media (max-width: $m) {
+          font-size: 16px;
+          margin: 13px 0;
+        }
+      }
+      & .desc {
+        margin-bottom: 20px;
+        padding: 0 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #101010;
+        line-height: 24px;
+        transition: 0.4s;
+        @media (max-width: $m) {
+          margin-bottom: 6px;
+          padding: 0 10px;
+          font-size: 10px;
+        }
+      }
+      & button {
+        @extend %btn-main;
+        width: 115px;
+        margin-bottom: 30px;
+        height: 35px;
+        &:hover {
+          @extend %btn-main-hover;
+        }
+        @media (max-width: $m) {
+          height: 27px;
+          width: 80px;
+          font-size: 11px;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  & h5 {
+    margin-top: 25px;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.4s;
+    font-family: "Montserrat", sans-serif;
+
+    &:hover {
+      color: $main-color-hover;
+    }
+  }
+}

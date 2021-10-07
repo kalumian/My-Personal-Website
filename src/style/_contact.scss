@@ -1,0 +1,114 @@
+.contact {
+  text-align: center;
+  & form {
+    margin-top: 40px;
+    font-family: "Montserrat", sans-serif;
+  }
+  & .row {
+    width: 60%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: $l) {
+      width: 80%;
+    }
+    @media (max-width: $m) {
+      width: 95%;
+    }
+    @media (max-width: $s) {
+      width: 85%;
+      flex-direction: column;
+      margin: 30px auto;
+    }
+    &:nth-child(2) .input {
+      width: 95%;
+      & textarea {
+        width: 97%;
+        font-size: 16px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        padding: 10px;
+        outline: none;
+        box-shadow: 1px 1px 8px #2c8cb738;
+        border: 1px solid black;
+        border-radius: 4px;
+        transition: 0.4s;
+        &:focus {
+          box-shadow: 1px 1px 8px #2c8bb79a;
+        }
+      }
+    }
+  }
+  & .input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 45%;
+    @media (max-width: $s) {
+      width: 97%;
+      margin-top: 40px;
+    }
+  }
+  & label {
+    font-weight: 500;
+    position: absolute;
+    font-size: 14px;
+    align-self: baseline;
+    top: -25px;
+    text-transform: uppercase;
+    left: 10px;
+  }
+  & input {
+    font-weight: 400;
+    padding: 7px 4px 4px 12px;
+    height: 23px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    box-shadow: 1px 1px 8px #2c8cb738;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: 0.4s;
+    &:focus {
+      box-shadow: 1px 1px 8px #2c8bb79a;
+    }
+  }
+  & [type="submit"] {
+    @extend %btn-main;
+    height: 40px;
+    width: 90%;
+    margin: 0 auto;
+    & .input {
+      @media (max-width: $s) {
+        margin-top: 20px;
+      }
+    }
+    &:hover {
+      @extend %btn-main-hover;
+    }
+    text-transform: uppercase;
+  }
+  & .links {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    & a {
+      font-size: 16px;
+      padding: 4px 7px;
+      border-radius: 50%;
+      color: black;
+      background-color: white;
+      border: 1px solid black;
+      justify-content: center;
+      align-items: center;
+      margin: 0 6px;
+      display: block;
+      cursor: pointer;
+      transition: 0.4s;
+      &:hover {
+        background-color: black;
+        color: $seconday-color;
+      }
+    }
+  }
+}

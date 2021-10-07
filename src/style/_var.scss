@@ -1,0 +1,58 @@
+// Anmition
+$trans: 0.3s;
+
+// Color
+$main-color: black; 
+$main-color-hover: rgba(0, 0, 0, 0.842); 
+$seconday-color: #3ba3d2;
+$desc-color: #3a3a3a;
+
+// Shadow
+$box-shadow: 1px 1px 6px 0px #0000001e;
+$box-shadow-inset: inset 0px 0px 10px 5px #00000005;
+
+// Component
+%btn-main {
+  background: white;
+  border: black solid 1px;
+  transition: $trans;
+  font-family: "Poppins", Arial, sans-serif;
+  cursor: pointer;
+  font-weight: 400;
+}
+%btn-main-hover {
+  background-color: $main-color;
+  color: $seconday-color;
+}
+
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+%after {
+  position: absolute;
+  content: "";
+  display: block;
+}
+
+$xl: 1200px;
+
+$l: 992px;
+
+$m: 768px;
+
+$s: 540px;
+
+%title {
+  border-bottom: 3px solid #333333;
+  padding: 0 20px 10px 20px;
+  display: inline-block;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 37px;
+  margin-top: 0;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 10%);
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
